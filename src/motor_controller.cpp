@@ -16,6 +16,7 @@ void commandsCallback(const std_msgs::String::ConstPtr& msg) {
   {
     leftSpeed = -1.0;
     rightSpeed = -1.0;
+    std::cout<<"Gooooooooooooo!!!!"<<std::endl;
   }
   else if(command == "GO_REALLY_FAST")
   {
@@ -52,7 +53,7 @@ void commandsCallback(const std_msgs::String::ConstPtr& msg) {
 }
 
 int main(int argc, char **argv) {
-  ros::init(argc, argv, "motorController");
+  ros::init(argc, argv, "motorController2");
   ros::NodeHandle n;
 
   ros::Subscriber commandSub = n.subscribe("motor_commands", 1000, commandsCallback);

@@ -30,4 +30,5 @@ add_executable(motor_controller src/motor_controller.cpp)
 target_link_libraries(motor_controller
         ${catkin_LIBRARIES}
         )
-
+add_executable(motor_controller_2 src/motor_controller_2.cpp)
+target_link_libraries(motor_controller_2 ${catkin_LIBRARIES})
